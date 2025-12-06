@@ -15,7 +15,8 @@ let weakset = new WeakSet();
 
 let obj = {name: "Roshan"}
 
-weakset.add(obj);
-obj = null
+weakset.add(obj); 
+obj = null  // we are removing the object
 
 console.log(weakset.has(obj))
+
