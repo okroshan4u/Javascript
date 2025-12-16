@@ -1,7 +1,7 @@
 const user = {
   name:"Roshan"
 }
-console.log(user.toString());
+console.log(user.toString()); // even though the toString is not in user js will get the from the prototype 
 
 const parent = {
   greet() {
@@ -18,5 +18,6 @@ child.name = "Roshan";
 
 // child.greet(); // Hello from parent
 child.say(); // Hello from parent
+
 
 
