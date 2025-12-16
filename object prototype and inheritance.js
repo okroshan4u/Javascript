@@ -1,3 +1,7 @@
+const user = {
+  name:"Roshan"
+}
+
 const parent = {
   greet() {
     console.log("Hello from parent");
@@ -13,3 +17,4 @@ child.name = "Roshan";
 
 // child.greet(); // Hello from parent
 child.say(); // Hello from parent
+
