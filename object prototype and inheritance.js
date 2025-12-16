@@ -1,6 +1,7 @@
 const user = {
   name:"Roshan"
 }
+console.log(user.toString());
 
 const parent = {
   greet() {
@@ -17,4 +18,5 @@ child.name = "Roshan";
 
 // child.greet(); // Hello from parent
 child.say(); // Hello from parent
+
 
