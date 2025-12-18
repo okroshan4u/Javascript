@@ -1,4 +1,4 @@
-const arr = [1,2,3,4,5,6]
+const arr = [1,2,3,4,5,6];
 // const n = arr.length
 // // console.log(n)
 // let max = 0;
