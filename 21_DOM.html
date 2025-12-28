@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <h1 id="title">This is Roshan</h1>
+    <p id="para">Here we will see getattribute <span style="display:none">and setattribute</span> in the console</p>
+    <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">four</li>
+    </ul>
+</body>
+
+</html>
+
+
+<!-- document.getElementById("title").getAttribute("id")
+'title'
+document.getElementById("title").getAttribute("class")
+null
+document.getElementById("title").setAttribute("class","test")
+undefined
+document.getElementById("title").setAttribute("class","test heading") -->
+
+<!-- 
+so the difference between innertext , innerHTML and textContent is that 
+para.innerHTML
+'Here we will see getattribute <span style="display:none">and setattribute</span>  in the console'
+para.innerText
+'Here we will see getattribute in the console'
+para.innerContent
+undefined
+para.textContent
+'Here we will see getattribute and setattribute  in the console'
+
+
+innerText = will show only text that is not hidden by style/css properties
+textContent = will show all the text inside that attribute even they are hidden by the style/css properties
+innerHTML = will show all , text and html and css all
+
+-->
+
+<!-- 
+Key Differences at a Glance
+
+Feature	                querySelector	            querySelectorAll
+
+Matches	                First match only	        All matches
+Return type	            Element or null	            NodeList
+Loop needed	            ❌ No	                   ✅ Yes
+Performance	            Slightly faster	            Slightly slower
+
+
+
+-->
+
+
+<!-- 
+document.getElementsByClassName("list-item")
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const list = document.getElementsByClassName("list-item")
+undefined
+list.forEach((item)=> item.style.backgroundColor = 'green)
+VM6475:1 Uncaught SyntaxError: Invalid or unexpected token
+list.forEach((item)=>{
+    item.style.backgroundColor = "green"
+})
+VM6569:1 Uncaught TypeError: list.forEach is not a function
+    at <anonymous>:1:6
+const list2 = document.querySelectorAll(".list-item")
+undefined
+const list2 = document.querySelectorAll(li)
+VM6628:1 Uncaught ReferenceError: li is not defined
+    at <anonymous>:1:41
+const list2 = document.querySelectorAll('li')
+undefined
+const list2 = document.querySelectorAll(".list-item")
+undefined
+list2.forEach((item)=>{
+    item.style.backgroundColor = "green"
+})
+undefined
+list2
+NodeList(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+0
+: 
+li.list-item
+1
+: 
+li.list-item
+2
+: 
+li.list-item
+3
+: 
+li.list-item
+length
+: 
+4
+[[Prototype]]
+: 
+NodeList
+list
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+0
+: 
+li.list-item
+1
+: 
+li.list-item
+2
+: 
+li.list-item
+3
+: 
+li.list-item
+length
+: 
+4
+[[Prototype]]
+: 
+HTMLCollection
+
+
+
+
+
+-->
+
+<!--  difference between Array , Nodelist and HTML collection -->
+
+<!-- 
+| Feature                | Array | NodeList  | HTMLCollection |
+| ---------------------- | ----- | --------- | -------------- |
+| Real array             | ✅     | ❌         | ❌              |
+| DOM-specific           | ❌     | ✅         | ✅              |
+| Contains only elements | ❌     | ❌         | ✅              |
+| `forEach()`            | ✅     | ✅         | ❌              |
+| `map / filter`         | ✅     | ❌         | ❌              |
+| Live updates           | ❌     | Sometimes | ✅              |
+
+
+
+In JavaScript, both NodeList and HTMLCollection are array-like DOM collections, but they are not real arrays,
+so they do not support array methods like map, filter, or reduce. To convert them into a real array, 
+we commonly use Array.from() or the spread operator (...). 
+For example, Array.from(nodeList) or [...htmlCollection] creates a new array containing the same elements.
+These approaches are preferred in modern JavaScript because they are clean, readable, and widely supported.
+An older approach is using Array.prototype.slice.call(collection), which was mainly used for legacy browser support. 
+Converting these collections into arrays allows us to use full array functionality while working with DOM elements.
+
+
+
+
+
+-->
