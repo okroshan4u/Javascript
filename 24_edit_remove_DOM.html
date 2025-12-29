@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan</title>
+</head>
+<body>
+    <ul>
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+
+    // Adding
+
+    const ul = document.querySelector("ul")
+    ul.className = "language";
+
+    // const ul_cls = document.querySelector(".language")
+
+    // function addlang(langName){
+    //     const li= document.createElement("li")       
+    //     li.innerHTML = `${langName}`;        // here if we are adding the text in this way then we have to traverse the whole tree and then we will be able to add 
+    //     ul_cls.appendChild(li)               // the text at the end which is not optimized casue if it would have 100000li's then it would have mad scene
+    // }
+    // addlang("Python")
+    // addlang("Ruby")
+    
+    // console.log(ul_cls.outerHTML)
+
+    function Optiaddlang(langName){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName)) // while this just create a textNOdes and just adding there it is nice and optimized
+        document.querySelector(".language").appendChild(li)
+    }
+    Optiaddlang("python")
+    Optiaddlang("ruby")
+    Optiaddlang("Typescript")
+
+
+    // Edit
+    
+    const thirdLang = document.querySelector("li:nth-child(3)")
+    // console.log(thirdLang.outerHTML)
+    // thirdLang.innerHTML = "Mojo"
+    const li = document.createElement("li")
+    li.textContent = "Mojo"
+
+    thirdLang.replaceWith(li)
+
+    const firstLang = document.querySelector("li:first-Child");
+    // console.log(firstLang)
+    firstLang.outerHTML =  '<li>Cpp</li>'
+
+
+    //Remove
+
+    const lastLang = document.querySelector("li:last-Child");
+
+    lastLang.remove()
+
+
+</script>
+</html>
