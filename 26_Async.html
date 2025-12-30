@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async function</title>
+</head>
+<body>
+    <h1>This is Roshan and </h1>
+    <button>Stop</button>
+
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("I have left my one the baddest habit")
+    // },2000)
+
+// or
+    const givestatement = ()=>{
+        console.log("I have left one of my the baddest habit")
+    }
+    setTimeout(givestatement,2000)
+
+    const changeContentTitle = ()=>{
+        document.querySelector("h1").innerHTML = "I have left one of my baddest habit"
+    }
+
+    const changeTitle = setTimeout(changeContentTitle,3000)
+
+    document.querySelector("button").addEventListener("click",()=>{
+        clearTimeout(changeTitle)
+        console.log("SetTimeout has been stopped")
+    })
+    
+</script>
+</html>
