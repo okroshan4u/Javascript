@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #212121; color: white;">
+    <h2>Imges </h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="mountain"
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1170&auto=format&fit=crop"
+                    alt="mountain landscape"></li>
+
+            <li><img width="200px" id="coding"
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1170&auto=format&fit=crop"
+                    alt="coding workspace"></li>
+
+            <li><img width="200px" id="nature"
+                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop"
+                    alt="nature scenery" ></li>  
+                    <!-- onclick="alert('nature Dcenery')" if we use this inline js then it will not be scalable in js but it is in reactjs -->
+
+
+            <li><img width="200px" id="technology"
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1170&auto=format&fit=crop"
+                    alt="technology circuit"></li>
+
+            <li><img width="200px" id="city"
+                    src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1170&auto=format&fit=crop"
+                    alt="city skyline"></li>
+
+            <li><img width="200px" id="abstract"
+                    src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1170&auto=format&fit=crop"
+                    alt="abstract colors"></li>
+
+            <li><img width="200px" id="forest"
+                    src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1170&auto=format&fit=crop"
+                    alt="forest road"></li>
+
+            <li><img width="200px" id="creative"
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop"
+                    alt="creative desk"></li>
+
+            <li><img width="200px" id="business"
+                    src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1170&auto=format&fit=crop"
+                    alt="business meeting"></li>
+
+            <li><img width="200px" id="night"
+                    src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=1170&auto=format&fit=crop"
+                    alt="night city lights"></li>
+                <li> <a style="color:aliceblue" href="http://google.com" id="google">Google</a></li>
+
+
+        </ul>
+    </div>
+
+    <script>
+        // document.getElementById("nature").onclick = function(){
+        //     alert("you clicked on nature image")
+        // }  // this method is fine but this will give less control and features incompared to the addEventListener
+
+        // TODO
+        //attachEvent()
+        //jQuery - on
+        // type , timestamp , defaultPrevented
+        //target , toElement, srcElement, currentTarget
+        //clientX, clientY, screenX , screenY , offsetX, offsetY
+        //AltKey , ctrlKey , shiftKey, keycode
+
+
+
+
+        // document.getElementById("nature").addEventListener('click',(e)=>{
+        //     // alert("You clicked on the nature image")
+        //     console.log(e)
+        // })
+        // document.getElementById("nature").addEventListener('click',(e)=>{
+        //     // alert("You clicked on the nature image")
+        //     console.log(e)
+        // },false) // above code and below one is same it is bydefault set to false that is why we do not pay attention 
+                // difference is below
+
+        // document.getElementById("images").addEventListener("click",(e)=>{
+        //     console.log("ul clicked here")
+        // }, false)
+
+        // document.getElementById("nature").addEventListener("click",(e)=>{
+        //     console.log("nature image clicked here")
+        // }, false)
+        // in the above case setting default case that is false we 
+        // are setting it to go for event bubbling that is first 
+        // the inner function will execute then outer function 
+        // will execute 
+
+
+        // in the below case event capturing is happeing that vice versa of event bubbling 
+        
+        // document.getElementById("images").addEventListener("click",(e)=>{
+        //     console.log("ul clicked here")
+        // }, true)
+
+        // document.getElementById("nature").addEventListener("click",(e)=>{
+        //     console.log("nature image clicked here")
+        // }, true)
+        
+
+        // how to stop event propagation
+        
+        
+        // document.getElementById("images").addEventListener("click",(e)=>{
+        //     console.log("ul clicked here")
+        //     e.stopPropagation()
+
+        // }, false)
+
+        // document.getElementById("nature").addEventListener("click",(e)=>{
+        //     console.log("nature image clicked here")
+        //     e.stopPropagation()
+        // }, false)
+
+        // preventing default action
+
+        // document.getElementById("google").addEventListener('click',function(e){
+        //     console.log(e)
+        //     e.preventDefault()
+        // })
+
+
+
+        // console.log(document.querySelectorAll('li'))
+        // const allLi = document.querySelectorAll('li')
+        // allLi.forEach((el)=>{
+        //     el.addEventListener("click",(e)=>{
+        //         // console.log(e.target.id)
+        //         // console.log(e.target.id)
+        //         if(e.target.tagName === "IMG"){
+        //             // console.log(e.target.src)
+        //             e.target.src = "";
+        //         }
+                
+        //     },false)
+        // })
+  document.querySelector('#images').addEventListener('click',function(e){
+    // console.log(e.target.parentNode)
+    if(e.target.tagName === 'IMG'){
+        let itemtoremove = e.target.parentNode;
+        itemtoremove.remove()
+        // itemtoremove.parentNode.removeChild(itemtoremove)
+
+    }
+
+  },false)
+
+    </script>
+</body>
+
+</html>
