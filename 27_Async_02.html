@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async function</title>
+</head>
+
+<body>
+    <h1>This is Roshan and </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+
+    // setInterval(function(){
+    //     const num =Math.round((Math.random()*100 + 1).toFixed(2))
+    //     console.log(`I have left my baddest habit on 29th dec 2025 but this start on 28th night a day before today with id ${num}`)
+    // },2000)
+
+// OR
+
+    // const commiting = () => {
+    //     const num = Math.round((Math.random() * 100 + 1).toFixed(2))
+    //     console.log(`I have left my baddest habit on 29th dec 2025 but this start on 28th night a day before today with id ${num}`)
+    // }
+    // setInterval(function(){
+    //     commiting()
+    // },2000)
+
+    // we can pass the parameters as well in setInterval
+
+    const commiting = (str) => {
+        const num = Math.round((Math.random() * 100 + 1).toFixed(2))
+        console.log(`I have left my baddest habit on 29th dec 2025 but this start on 28th night a day before today with id ${num} and ${str}`)
+    }
+   
+    // const stopInterval = setInterval(commiting,2000,"This is parameter")
+    let  stopInterval = null
+
+    
+    document.querySelector("#start").addEventListener("click",()=>{
+        if(stopInterval === null){
+            stopInterval =  setInterval(commiting, 2000,"This is params")
+            console.log("Started !")
+        }
+    })
+
+    document.querySelector("#stop").addEventListener("click",()=>{
+        if(stopInterval !== null)
+        clearInterval(stopInterval)
+        stopInterval = null
+        console.log("Stopped !")
+    })
+    
+
+</script>
+
+</html>
