@@ -17,3 +17,21 @@ const userOne = new user("Roshan","okroshan4u@gmail.com", "12354")
 
 console.log(userOne.encryptPassword())
 console.log(userOne.changeUserName())
+
+
+// behind the scene if we do have classes in js
+
+function User(username, email,password){
+    this.username = username;
+    this.password = password;
+    this.email = email;
+}
+
+User.prototype.encryptPassword = function(){
+    return `${this.password}abc`
+}
+
+User.prototype.changeUserName = function(){
+    return `${this.username.toLowerCase()}`
+}
+
