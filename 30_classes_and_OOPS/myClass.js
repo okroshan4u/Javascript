@@ -8,8 +8,12 @@ class user{
     encryptPassword(){
         return `${this.password}abc`
     }
+    changeUserName(){
+        return `${this.username.toLowerCase()}`
+    }
 }
 
 const userOne = new user("Roshan","okroshan4u@gmail.com", "12354")
 
 console.log(userOne.encryptPassword())
+console.log(userOne.changeUserName())
