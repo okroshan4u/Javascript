@@ -35,3 +35,10 @@ User.prototype.changeUserName = function(){
     return `${this.username.toLowerCase()}`
 }
 
+
+const userTwo = new User("Roshan","okroshan4u@gmail.com", "12354")
+
+console.log(userTwo.changeUserName())
+console.log(userTwo.encryptPassword())
+
+
