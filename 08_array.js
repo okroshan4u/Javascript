@@ -8,7 +8,7 @@ arr.push(3);
 
 console.log("Printing array at line 9",arr);
 
-result = arr.pop();  // Removes the original array
+result = arr.pop();  // Removes the original a
 // console.log("The popped element from the array is ", result);
 // console.log(arr);
 
@@ -51,6 +51,7 @@ console.log("Printing array at line 38",arr);
 // arr.shift()// it removes the first element from the array and shift allthe elemnent to the left and reduces the lenght of the original array
 // console.log(arr.length);
 // console.log(arr);
+
 
 
 
