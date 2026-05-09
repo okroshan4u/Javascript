@@ -1,4 +1,4 @@
-const box = document.querySelectorAll(".box")
+const box = document.querySelectorAll(".box")l
 const box1 = document.querySelector("#grey");
 
 
