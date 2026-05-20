@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    .grandparent{
+      background-color: yellow;
+      padding: 100px;
+    }
+    .parent{
+      background-color: blue;
+      padding : 50px;
+    }
+    .child{
+      background: red;
+      padding: 25px;
+    }
+    .btn{
+        cursor: pointer;
+    }
+  </style>
+  <body>
+      <div class="grandparent">
+        grandparent
+        <div class="parent">
+          parent
+          <div class="child">
+            Child
+            <button class="btn" type="submit">click me</button>
+          </div>
+          
+        </div>
+      </div>
+      
+      <script>
+        document.querySelector(".grandparent").addEventListener("click",()=>{
+            console.log("Grandparent clicked")
+        },true)
+
+        document.querySelector(".parent").addEventListener("click",()=>{
+            console.log("Parent clicked")
+        },true)
+
+        document.querySelector(".child").addEventListener("click",()=>{
+            console.log("child clicked")
+        },true)
+        document.querySelector(".btn").addEventListener("click",(e)=>{
+            console.log("button clicked")
+            // e.stopPropagation()
+        },true)
+        
+      
+      </script>
+  </body>
+</html>
