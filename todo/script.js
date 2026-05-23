@@ -23,7 +23,7 @@
             saveTodos();
         })
 
-        // text of to
+        // text of t
 
         const textSpan = document.createElement("span");
         textSpan.textContent = todo.text;
