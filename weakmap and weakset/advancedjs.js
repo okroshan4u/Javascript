@@ -1,4 +1,4 @@
-// weak
+//
 let weak = new WeakMap();
 
 let obj = {key: "Roshan"};
