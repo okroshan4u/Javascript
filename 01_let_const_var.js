@@ -3,7 +3,7 @@ let roll = 421
 var id = "ma5055"
 let ram;
 
-// console.log(roll);
+// console.log(roll)
 // console.log(id)
 // console.log(name)
 // or we can use the below method to print everything at once
