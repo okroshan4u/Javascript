@@ -3,7 +3,7 @@ let roll = 421
 var id = "ma5055"
 let ram;
 
-// hgtft
+
 // console.log(roll);
 // console.log(id)
 // console.log(name)
