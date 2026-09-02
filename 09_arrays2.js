@@ -2,7 +2,7 @@ const marvel_heros = ["Ironman", "Captain", "Spiderman"]
 const dc_heros = ["Superman", "Batman", "wonderwoman"]
 
 // +++++++++++++++++++merging of array+++++++++++++++++++++++++++++++++
-// marvel_heros.push(dc_heros); // // it directly pushes the dc_heros arrays as argument meaning it modifies the original a
+// marvel_heros.push(dc_heros); // // it directly pushes the dc_heros arrays as argument meaning it modifies the original array
 
 // console.log(marvel_heros); 
 
