@@ -22,7 +22,7 @@
 let isloogedIn = "" // false
  let booleanIsLoggedIn = Boolean(isloogedIn);
 
-//  console.log(booleanIsLoggedIn
+//  console.log(booleanIsLogge
 
 
 let number = 33
