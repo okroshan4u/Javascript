@@ -1,4 +1,4 @@
-//arr
+//a
 const arr = [2,"Roshan", 25,  't', null];
 
 // console.log(arr[0]);
