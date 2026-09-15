@@ -1,5 +1,5 @@
 const score = 2502
-// console.log(scor
+// console.log(sco
 
 const balance = new Number(100)
 // console.log(balance)
