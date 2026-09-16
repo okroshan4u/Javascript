@@ -6,7 +6,7 @@ let ram;
 
 // console.log(roll);
 // console.log(id);
-// console.log(name)
+// console.log(name);
 // or we can use the below method to print everything at once
 
 console.table([name, roll, id,ram]); // here ram will be printed as undefined cause it is declared but not initialized so it will give undefined which is the default value provided to js 
