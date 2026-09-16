@@ -5,7 +5,7 @@ let ram;
 
 
 // console.log(roll);
-// console.log(id)
+// console.log(id);
 // console.log(name)
 // or we can use the below method to print everything at once
 
