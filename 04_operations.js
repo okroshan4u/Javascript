@@ -1,7 +1,7 @@
 let value = 3
 let negValue = -value;
 
-// console.log(negValue)
+// console.log(negValu
 
 // console.log(3+3)
 // console.log(3-3)
