@@ -1,5 +1,4 @@
 const score = 2502
-// console.
 
 const balance = new Number(100)
 // console.log(balance);
