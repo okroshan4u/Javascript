@@ -1,7 +1,7 @@
 
 const arr = [2,"Roshan", 25,  't', null];
 
-// console.log(ar
+// console.
 // console.log(arr);
 arr.push(3);
 
