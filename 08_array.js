@@ -1,8 +1,6 @@
 
 const arr = [2,"Roshan", 25,  't', null];
 
-
-// console.log(arr);
 arr.push(3);
 
 console.log("Printing array at line 9",arr);
