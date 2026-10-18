@@ -1,2 +1,2 @@
-console.log(typeof null);  // object ==> It’s a bug from the very first version of JavaScri
+console.log(typeof null);  // object ==> It’s a bug from the very first version of JavaScript
 console.log(typeof undefined);
